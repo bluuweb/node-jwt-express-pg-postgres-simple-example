@@ -22,6 +22,9 @@ const register = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    if (error.code === "23505") {
+      return res.status(409).send({ error: error.detail });
+    }
     return res.status(500).send({ error: error.message });
   }
 };
