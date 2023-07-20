@@ -7,7 +7,7 @@ CREATE TABLE users (
   	user_id SERIAL PRIMARY KEY,
   	username VARCHAR(50),
   	email VARCHAR(100) NOT NULL UNIQUE,
-	password VARCHAR(300) NOT NULL
+	  password VARCHAR(300) NOT NULL
 );
 
 -- Crear tabla "books"
